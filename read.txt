@@ -1,0 +1,44 @@
+Build the REST API's
+using MEAN or MERn stacks
+for now we are using MEN stacl - MongoDb, Express, Nodejs
+
+MongoDb - database
+ Express - web framework
+ Nodejs - runtime
+ postman - server
+ mongoose - MongoDb tool
+ VS code - editor
+
+ > download the lastest vesrsion of Nodejs
+ >create one of the folder with any name (nodejs_crud)
+ >open the terminal
+ > npm init - which creates the package
+   enter couple of times
+   entry point: app.js
+   author : sandeep
+ >  It will create the package.json
+ >Now install the packages
+  npm install Express
+  npm install MongoDb - and dowload the mongodb in system/laptop
+  npm install mongoose
+  npm install -g nodemon --save-dev  - dev dependency
+  "start":"nodemon app.js" in scripts 
+> Now create the app.js and start coding
+>in terminal > mongod
+
+const express = require('express')  // express service rfequired for this app
+const mongoose = require('mongoose') // require mongoose -- in terminal > mongod
+const url = 'mongodb:/localhost/Programer'
+
+const app = express()  // start or initialize the express framework 
+
+mongoose.connect(url, {useNewUrlParser:true})
+const con = mongoose.connection
+
+con.on('open', function(){  // this will give the messge when opened and connected
+    console.log('connected')
+})
+
+>AFter writing this code now command 
+ nodemon run start
+  
