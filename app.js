@@ -10,5 +10,6 @@ const con = mongoose.connection
 
 con.on('open', function(){  // this will give the messge when opened and connected
     console.log('connected...')
+    console.log('Change from master branch ...')
 })
 
